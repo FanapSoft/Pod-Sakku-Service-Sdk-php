@@ -1,0 +1,7 @@
+.idea/
+.vscode/
+*Demo.php
+**/vendor/
+composer.lock
+sakkuTestDataLocal.php
+*Raw.*
