@@ -26,12 +26,12 @@ final class StopAppByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'commit' => '',
-			'force' => '',
-			'tag' => '',
+			'Authorization' => $this->token,,
+			'commit' => true,
+			'force' => true,
+			'tag' => 'latest',
 		];
 		try {
 			$result = $SakkuService->stopAppById($params);
@@ -49,7 +49,7 @@ final class StopAppByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->stopAppById($params);

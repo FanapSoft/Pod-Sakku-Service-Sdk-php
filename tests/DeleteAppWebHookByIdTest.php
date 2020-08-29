@@ -29,7 +29,7 @@ final class DeleteAppWebHookByIdTest extends TestCase
 			'appId' => '',
 			'wid' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->deleteAppWebHookById($params);

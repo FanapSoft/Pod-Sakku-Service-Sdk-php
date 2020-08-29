@@ -26,11 +26,11 @@ final class GetAppActivityTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'page' => '',
-			'size' => '',
+			'Authorization' => $this->token,,
+			'page' => 0,
+			'size' => 10,
 		];
 		try {
 			$result = $SakkuService->getAppActivity($params);
@@ -48,7 +48,7 @@ final class GetAppActivityTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->getAppActivity($params);

@@ -26,11 +26,11 @@ final class CommitAppContainerTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 123,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'containerId' => '',
-			'tag' => '',
+			'Authorization' => $this->token,
+			'containerId' => 1234,
+			'tag' => 'tag',
 		];
 		try {
 			$result = $SakkuService->commitAppContainer($params);
@@ -48,7 +48,7 @@ final class CommitAppContainerTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 123,
         ];
 		try {
 			$result = $SakkuService->commitAppContainer($params);

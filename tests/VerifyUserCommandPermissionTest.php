@@ -27,9 +27,9 @@ final class VerifyUserCommandPermissionTest extends TestCase
 		$params = [
 			## ================= *Required Parameters  =================
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'appId' => '',
-			'cmd' => '',
+			'Authorization' => $this->token,,
+			'appId'             => 2664,
+            'cmd'             => 'bash',
 		];
 		try {
 			$result = $SakkuService->verifyUserCommandPermission($params);

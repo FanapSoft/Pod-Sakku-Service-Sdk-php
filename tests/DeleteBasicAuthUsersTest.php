@@ -26,8 +26,8 @@ final class DeleteBasicAuthUsersTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'basicAuthId' => '',
+			'appId' => 1234,
+			'basicAuthId' => 342,
 			## ================= Optional Parameters  =================
 		];
 		try {
@@ -46,8 +46,8 @@ final class DeleteBasicAuthUsersTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'basicAuthId' => '',
+			'appId' => 1234,
+			'basicAuthId' => 321,
         ];
 		try {
 			$result = $SakkuService->deleteBasicAuthUsers($params);

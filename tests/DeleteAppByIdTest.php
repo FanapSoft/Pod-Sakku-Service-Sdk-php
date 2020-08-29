@@ -26,10 +26,10 @@ final class DeleteAppByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'force' => '',
+			'Authorization' => $this->token,,
+			'force' => true,
 		];
 		try {
 			$result = $SakkuService->deleteAppById($params);
@@ -47,7 +47,7 @@ final class DeleteAppByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->deleteAppById($params);

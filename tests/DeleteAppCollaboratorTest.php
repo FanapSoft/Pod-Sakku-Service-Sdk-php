@@ -26,10 +26,11 @@ final class DeleteAppCollaboratorTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
+			'appId' => 1234,
+			'cid' => 123,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'appId' => '',
-			'cid' => '',
+			'Authorization' => $this->token,,
+			
 		];
 		try {
 			$result = $SakkuService->deleteAppCollaborator($params);
@@ -47,6 +48,8 @@ final class DeleteAppCollaboratorTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
+			'appId' => 1234,
+			'cid' => 123,
         ];
 		try {
 			$result = $SakkuService->deleteAppCollaborator($params);
@@ -65,10 +68,11 @@ final class DeleteAppCollaboratorTest extends TestCase
 		$paramsWithoutRequired = [];
 		$paramsWrongValue = [
 			## =============== *Required Parameters  ===============
-			## =============== Optional Parameters  ===============
-			'Authorization' => 123,
 			'appId' => '123',
 			'cid' => '123',
+			## =============== Optional Parameters  ===============
+			'Authorization' => 123,
+			
 		];
 		try {
 			self::$SakkuService->deleteAppCollaborator($paramsWithoutRequired);

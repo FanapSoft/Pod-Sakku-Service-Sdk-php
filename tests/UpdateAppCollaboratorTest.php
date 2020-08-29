@@ -27,7 +27,7 @@ final class UpdateAppCollaboratorTest extends TestCase
 		$params = [
 			## ================= *Required Parameters  =================
 			## ================= Optional Parameters  =================
-			'level' => '',
+			'level' => 7,
 		];
 		try {
 			$result = $SakkuService->updateAppCollaborator($params);

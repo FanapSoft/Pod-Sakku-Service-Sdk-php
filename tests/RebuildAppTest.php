@@ -26,9 +26,9 @@ final class RebuildAppTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->rebuildApp($params);
@@ -46,7 +46,7 @@ final class RebuildAppTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->rebuildApp($params);

@@ -26,10 +26,10 @@ final class CreateAppByDockerComposeTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'composeFile' => '',
-			'globalConfig' => '',
+			'composeFile'     => 'docker-compose.yml',
+            'globalConfig'     => '{"name":"PHPTestDockerCompose","mem":0.1,"cpu":0.1,"disk":0.1,"ports":[{"port":80,"protocol":"HTTP","ssl":False,"onlyInternal":False,"basicAuthentication":False,"forceRedirectHttps":False}],"cmd":"","entrypoint":null,"scalingMode":"OFF","args":[],"modules":[{"code":50,"appId":0,"metadata":{"appPath":"/usr/share/nginx/html","ftp":False}}],"environments":{},"labels":{},"netAlias":null,"basicAuthentications":[],"portOptions":null,"image":{"name":"nginx:latest","registry":"dockerhub","accessToken":"","username":""}',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,
 		];
 		try {
 			$result = $SakkuService->createAppByDockerCompose($params);
@@ -47,8 +47,8 @@ final class CreateAppByDockerComposeTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'composeFile' => '',
-			'globalConfig' => '',
+			'composeFile'     => 'docker-compose.yml',
+            'globalConfig'     => '{"name":"PHPTestDockerCompose","mem":0.1,"cpu":0.1,"disk":0.1,"ports":[{"port":80,"protocol":"HTTP","ssl":False,"onlyInternal":False,"basicAuthentication":False,"forceRedirectHttps":False}],"cmd":"","entrypoint":null,"scalingMode":"OFF","args":[],"modules":[{"code":50,"appId":0,"metadata":{"appPath":"/usr/share/nginx/html","ftp":False}}],"environments":{},"labels":{},"netAlias":null,"basicAuthentications":[],"portOptions":null,"image":{"name":"nginx:latest","registry":"dockerhub","accessToken":"","username":""}',
         ];
 		try {
 			$result = $SakkuService->createAppByDockerCompose($params);

@@ -26,8 +26,12 @@ final class AddAppCollaboratorTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
+			'appId'             => 2664,
+            'accessLevel'     => 'VIEW',
+            'email'     => 'keshtgar@pod.ir',
+            'imageRegistry'     => 'null',
 			## ================= Optional Parameters  =================
-			'level' => '',
+			'level' => 1,
 		];
 		try {
 			$result = $SakkuService->addAppCollaborator($params);
@@ -45,6 +49,10 @@ final class AddAppCollaboratorTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
+			'appId'             => 2664,
+            'accessLevel'     => 'VIEW',
+            'email'     => 'keshtgar@pod.ir',
+            'imageRegistry'     => 'null',
 		];
 		try {
 			$result = $SakkuService->addAppCollaborator($params);

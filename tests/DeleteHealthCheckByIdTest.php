@@ -26,10 +26,10 @@ final class DeleteHealthCheckByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'hid' => '',
+			'appId' => 1234,
+			'hid' => 123,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->deleteHealthCheckById($params);
@@ -47,8 +47,8 @@ final class DeleteHealthCheckByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'hid' => '',
+			'appId' => 1234,
+			'hid' => 123,
         ];
 		try {
 			$result = $SakkuService->deleteHealthCheckById($params);

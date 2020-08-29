@@ -26,7 +26,7 @@ final class AddDomainRecordTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'domain' => '',
+			'domain' => 'mydomain.ir',
 			'recordConfig' => '',
 			## ================= Optional Parameters  =================
 		];

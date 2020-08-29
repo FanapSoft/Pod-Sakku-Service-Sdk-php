@@ -2785,7 +2785,7 @@ final class SakkuServiceTest extends TestCase
 		$params = [
 			## ================= *Required Parameters  =================
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 			'appId' => '',
 			'cid' => '',
 		];
@@ -2871,7 +2871,7 @@ final class SakkuServiceTest extends TestCase
 		$params = [
 			## ================= *Required Parameters  =================
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 			'appId' => '',
 			'cmd' => '',
 		];
@@ -2957,7 +2957,7 @@ final class SakkuServiceTest extends TestCase
 		$params = [
 			## ================= *Required Parameters  =================
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 			'appId' => '',
 		];
 		try {
@@ -3045,7 +3045,7 @@ final class SakkuServiceTest extends TestCase
 			'responseString' => '',
 			'scheme' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->addAppHealthCheck($params);
@@ -3179,7 +3179,7 @@ final class SakkuServiceTest extends TestCase
 			'appId' => '',
 			'path' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->deleteAllAppHealthChecks($params);
@@ -3279,7 +3279,7 @@ final class SakkuServiceTest extends TestCase
 			'scheme' => '',
 			'checkRate' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->updateHealthCheckById($params);
@@ -3421,7 +3421,7 @@ final class SakkuServiceTest extends TestCase
 			'appId' => '',
 			'hid' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->deleteHealthCheckById($params);
@@ -3515,7 +3515,7 @@ final class SakkuServiceTest extends TestCase
 			'appId' => '',
 			'time' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->getRealTimeAppLogsById($params);
@@ -3608,7 +3608,7 @@ final class SakkuServiceTest extends TestCase
 			## ================= *Required Parameters  =================
 			'appId' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 			'addAsCollaborator' => '',
 			'customerEmail' => '',
 			'transferGit' => '',
@@ -3713,7 +3713,7 @@ final class SakkuServiceTest extends TestCase
 			## ================= *Required Parameters  =================
 			'appId' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->getAppWebHooks($params);
@@ -3799,7 +3799,7 @@ final class SakkuServiceTest extends TestCase
 			'appId' => '',
 			'wid' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 			'applicationId' => '',
 			'secured' => '',
 			'topics' => '',
@@ -3913,7 +3913,7 @@ final class SakkuServiceTest extends TestCase
 			'appId' => '',
 			'wid' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->deleteAppWebHookById($params);
@@ -4006,7 +4006,7 @@ final class SakkuServiceTest extends TestCase
 			## ================= *Required Parameters  =================
 			'name' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->getApplicationByName($params);
@@ -4092,7 +4092,7 @@ final class SakkuServiceTest extends TestCase
 			'composeFile' => '',
 			'globalConfig' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->createAppByDockerCompose($params);
@@ -4185,7 +4185,7 @@ final class SakkuServiceTest extends TestCase
 			## ================= *Required Parameters  =================
 			'configs' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->createPipeline($params);
@@ -4270,7 +4270,7 @@ final class SakkuServiceTest extends TestCase
 			## ================= *Required Parameters  =================
 			'config' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->createAppByStateMachine($params);
@@ -4354,7 +4354,7 @@ final class SakkuServiceTest extends TestCase
 		$params = [
 			## ================= *Required Parameters  =================
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 			'id' => '',
 		];
 		try {
@@ -4436,7 +4436,7 @@ final class SakkuServiceTest extends TestCase
 			## ================= *Required Parameters  =================
 			'deployQueueId' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->stopAppDeployWithQueueId($params);

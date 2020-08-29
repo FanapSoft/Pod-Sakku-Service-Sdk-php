@@ -26,10 +26,10 @@ final class DeleteAllAppHealthChecksTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'path' => '',
+			'appId'             => 2664,
+            'path'             => '/',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->deleteAllAppHealthChecks($params);
@@ -47,8 +47,8 @@ final class DeleteAllAppHealthChecksTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'path' => '',
+			'appId'             => 2664,
+            'path'             => '/',
         ];
 		try {
 			$result = $SakkuService->deleteAllAppHealthChecks($params);

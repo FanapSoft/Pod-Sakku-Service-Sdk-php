@@ -28,7 +28,7 @@ final class GetAppWebHooksTest extends TestCase
 			## ================= *Required Parameters  =================
 			'appId' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->getAppWebHooks($params);

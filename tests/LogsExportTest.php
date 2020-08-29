@@ -25,14 +25,13 @@ final class LogsExportTest extends TestCase
 	public function testLogsExportAllParameters()
 	{
 		$params = [
-			## ================= *Required Parameters  =================
-			'appId' => '',
-			'token' => '',
-			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'fromDate' => '',
-			'toDate' => '',
-			'saveTo' => '',
+			## ====================== *Required Parameters  =========================
+            'appId'             => 2804,
+            ## ====================== Optional Parameters  ==========================
+            // 'fromDate'          => '2020-02-01',
+            // 'toDate'            => '2020-04-31',
+            'saveTo'            => 'C:\Documents\logs2804_1.txt',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->logsExport($params);
@@ -50,8 +49,7 @@ final class LogsExportTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'token' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->logsExport($params);

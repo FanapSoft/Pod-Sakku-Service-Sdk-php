@@ -27,7 +27,7 @@ final class GetUserAppsStatusListTest extends TestCase
 		$params = [
 			## ================= *Required Parameters  =================
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 			'id' => '',
 		];
 		try {

@@ -26,15 +26,15 @@ final class AddAppHealthCheckTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'checkRate' => '',
-			'endpoint' => '',
-			'initialDelay' => '',
-			'responseCode' => '',
-			'responseString' => '',
-			'scheme' => '',
+			'appId'             => 2664,
+            'checkRate'         => 1000,
+            'endpoint'          => '/',
+            'initialDelay'      => 3000,
+            'responseCode'      => 200,
+            'responseString'    => 'test',
+            'scheme'            => 'http',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,
 		];
 		try {
 			$result = $SakkuService->addAppHealthCheck($params);
@@ -52,13 +52,13 @@ final class AddAppHealthCheckTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'checkRate' => '',
-			'endpoint' => '',
-			'initialDelay' => '',
-			'responseCode' => '',
-			'responseString' => '',
-			'scheme' => '',
+			'appId'             => 2664,
+            'checkRate'         => 1000,
+            'endpoint'          => '/',
+            'initialDelay'      => 3000,
+            'responseCode'      => 200,
+            'responseString'    => 'test',
+            'scheme'            => 'http',
         ];
 		try {
 			$result = $SakkuService->addAppHealthCheck($params);

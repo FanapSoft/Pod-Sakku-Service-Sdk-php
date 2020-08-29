@@ -26,9 +26,43 @@ final class CreatePipelineTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'configs' => '',
+			'configs'      => 
+                [
+                    [
+                        "name" => "PipelinePHP1",
+                        "mem" => 0.1,
+                        "cpu" => 0.1,
+                        "disk" => 0.1,
+                        "scalingMode" => "OFF",
+                        "deployType" => "DOCKER_IMAGE",
+                        "minInstance" => 1,
+                        "maxInstance" => 1,
+                        "image" => [
+                            "name" => "nginx:latest",
+                            "registry" => "dockerhub",
+                            "accessToken" => "",
+                            "username" => ""
+                        ],
+                    ],
+                    [
+                        "name" => "PipelinePHP2",
+                        "mem" => 0.1,
+                        "cpu" => 0.1,
+                        "disk" => 0.1,
+                        "scalingMode" => "OFF",
+                        "deployType" => "DOCKER_IMAGE",
+                        "minInstance" => 1,
+                        "maxInstance" => 1,
+                        "image" => [
+                            "name" => "nginx:latest",
+                            "registry" => "dockerhub",
+                            "accessToken" => "",
+                            "username" => ""
+                        ],
+                    ],
+                ],
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,
 		];
 		try {
 			$result = $SakkuService->createPipeline($params);

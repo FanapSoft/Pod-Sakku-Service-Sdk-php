@@ -26,16 +26,16 @@ final class UpdateHealthCheckByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'hid' => '',
-			'endpoint' => '',
-			'initialDelay' => '',
-			'responseCode' => '',
-			'responseString' => '',
-			'scheme' => '',
-			'checkRate' => '',
+			'appId'             => 2664,
+            'hid'             => 66,
+            'checkRate'         => 1000,
+            'endpoint'          => '/',
+            'initialDelay'      => 3000,
+            'responseCode'      => 200,
+            'responseString'    => 'test',
+            'scheme'            => 'https',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->updateHealthCheckById($params);
@@ -53,14 +53,14 @@ final class UpdateHealthCheckByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'hid' => '',
-			'endpoint' => '',
-			'initialDelay' => '',
-			'responseCode' => '',
-			'responseString' => '',
-			'scheme' => '',
-			'checkRate' => '',
+			'appId'             => 2664,
+            'hid'             => 66,
+            'checkRate'         => 1000,
+            'endpoint'          => '/',
+            'initialDelay'      => 3000,
+            'responseCode'      => 200,
+            'responseString'    => 'test',
+            'scheme'            => 'https',
         ];
 		try {
 			$result = $SakkuService->updateHealthCheckById($params);

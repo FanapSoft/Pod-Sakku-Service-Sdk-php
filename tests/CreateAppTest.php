@@ -26,33 +26,52 @@ final class CreateAppTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'deployType' => '',
+			"name" => "PHPTest3",
+			"mem" => 0.1,
+			"cpu" => 0.1,
+			"disk" => 0.1,
+			// "ports" => [
+			//     [
+			//         "port" => 80,
+			//         "protocol" => "HTTP",
+			//         "ssl" => False,
+			//         "onlyInternal" => False,
+			//         "basicAuthentication" => False,
+			//         "forceRedirectHttps" => False
+			//     ]
+			// ],
+			// "cmd" => '',
+			// "entrypoint" => '',
+			// "scalingMode" => 'OFF',
+			// "args" => [],
+			"modules" => [
+				[
+					"code" => 50,
+					"appId" => 0,
+					"metadata" => [
+						"appPath" => "/usr/share/nginx/html",
+						"ftp" => False
+					]
+				]
+			],
+			// "environments" => [],
+			// "labels" => [],
+			// "netAlias" => '',
+			// "basicAuthentications" => [],
+			// "portOptions" => null,
+			"image" => [
+				"name" => "nginx:latest",
+				"registry" => "dockerhub",
+				"accessToken" => "",
+				"username" => ""
+			],
+			"deployType" => 'DOCKER_IMAGE',
+			"minInstance" => 1,
+			"maxInstance" => 1,
+			// "network" => '',
+			// "dependsOn" => []
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'args' => '',
-			'basicAuthentications' => '',
-			'cmd' => '',
-			'cpu' => '',
-			'dependsOn' => '',
-			'disk' => '',
-			'entrypoint' => '',
-			'environments' => '',
-			'git' => '',
-			'healthChecks' => '',
-			'image' => '',
-			'labels' => '',
-			'links' => '',
-			'maxInstance' => '',
-			'mem' => '',
-			'minInstance' => '',
-			'modules' => '',
-			'name' => '',
-			'netAlias' => '',
-			'network' => '',
-			'pipeLineStatus' => '',
-			'ports' => '',
-			'scalingMode' => '',
-			'worker' => '',
+			'Authorization' => $this->token,
 		];
 		try {
 			$result = $SakkuService->createApp($params);
@@ -70,7 +89,7 @@ final class CreateAppTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'deployType' => '',
+			'deployType' => 'DOCKER_IMAGE'
         ];
 		try {
 			$result = $SakkuService->createApp($params);

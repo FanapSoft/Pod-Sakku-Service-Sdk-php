@@ -26,10 +26,20 @@ final class UpdateDomainRecordTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'domain' => '',
-			'name' => '',
-			'recordConfig' => '',
-			'type' => '',
+			'domain' => 'mydomain.ir',
+			'name' => 'r1',
+			'recordConfig' => [
+				"name" => "r1_edited",
+				"records" => [
+					[
+						"content" => "ns.sakku.cloud. hostmaster.sakku.cloud. 2019112302 5400 1800 302400 1800",
+						"disabled" => false
+					]
+				],
+				"ttl" => 3600,
+				"type" => 'CAA'
+			],
+			'type' => 'SOA',
 			## ================= Optional Parameters  =================
 		];
 		try {
@@ -48,10 +58,20 @@ final class UpdateDomainRecordTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'domain' => '',
-			'name' => '',
-			'recordConfig' => '',
-			'type' => '',
+			'domain' => 'mydomain.ir',
+			'name' => 'r1',
+			'recordConfig' => [
+				"name" => "r1_edited",
+				"records" => [
+					[
+						"content" => "ns.sakku.cloud. hostmaster.sakku.cloud. 2019112302 5400 1800 302400 1800",
+						"disabled" => false
+					]
+				],
+				"ttl" => 3600,
+				"type" => 'CAA'
+			],
+			'type' => 'SOA',
         ];
 		try {
 			$result = $SakkuService->updateDomainRecord($params);

@@ -28,7 +28,7 @@ final class GetAppSettingTest extends TestCase
 			## ================= *Required Parameters  =================
 			'appId' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->getAppSetting($params);

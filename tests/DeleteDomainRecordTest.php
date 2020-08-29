@@ -26,9 +26,9 @@ final class DeleteDomainRecordTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'domain' => '',
-			'name' => '',
-			'type' => '',
+			'domain' => 'mydomain.ir',
+			'name' => 'r2',
+			'type' => 'SOA',
 			## ================= Optional Parameters  =================
 		];
 		try {
@@ -47,9 +47,9 @@ final class DeleteDomainRecordTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'domain' => '',
-			'name' => '',
-			'type' => '',
+			'domain' => 'mydomain.ir',
+			'name' => 'r2',
+			'type' => 'SOA',
         ];
 		try {
 			$result = $SakkuService->deleteDomainRecord($params);

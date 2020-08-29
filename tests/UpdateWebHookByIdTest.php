@@ -26,14 +26,13 @@ final class UpdateWebHookByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'wid' => '',
+			'appId'         => 2664,
+            'wid'           => 14,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'applicationId' => '',
-			'secured' => '',
-			'topics' => '',
-			'url' => '',
+            'Authorization' => AUTHORIZATION,
+            'secured'       => true,
+            'topics'        => 'ALL',
+            'url'           => '192.168.6.22:8088',
 		];
 		try {
 			$result = $SakkuService->updateWebHookById($params);
@@ -51,8 +50,8 @@ final class UpdateWebHookByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'wid' => '',
+			'appId'         => 2664,
+            'wid'           => 14,
         ];
 		try {
 			$result = $SakkuService->updateWebHookById($params);

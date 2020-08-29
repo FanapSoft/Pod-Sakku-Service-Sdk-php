@@ -26,9 +26,9 @@ final class StopAppDeployTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->stopAppDeploy($params);
@@ -46,7 +46,7 @@ final class StopAppDeployTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->stopAppDeploy($params);

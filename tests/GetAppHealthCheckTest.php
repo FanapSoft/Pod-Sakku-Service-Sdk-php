@@ -27,7 +27,7 @@ final class GetAppHealthCheckTest extends TestCase
 		$params = [
 			## ================= *Required Parameters  =================
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 			'appId' => '',
 		];
 		try {

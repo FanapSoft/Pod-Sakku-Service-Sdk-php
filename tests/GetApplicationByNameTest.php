@@ -28,7 +28,7 @@ final class GetApplicationByNameTest extends TestCase
 			## ================= *Required Parameters  =================
 			'name' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->getApplicationByName($params);

@@ -28,7 +28,7 @@ final class GetAppVersionsTest extends TestCase
 			## ================= *Required Parameters  =================
 			'appId' => '',
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->getAppVersions($params);

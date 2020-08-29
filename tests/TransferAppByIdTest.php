@@ -26,13 +26,13 @@ final class TransferAppByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'addAsCollaborator' => '',
-			'customerEmail' => '',
-			'transferGit' => '',
-			'transferImageRepo' => '',
+			'Authorization' => $this->token,,
+			'addAsCollaborator' => true,
+            'customerEmail'     => 'email@pod.ir',
+            'transferGit'        => false,
+            'transferImageRepo' => false,
 		];
 		try {
 			$result = $SakkuService->transferAppById($params);
@@ -50,7 +50,7 @@ final class TransferAppByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->transferAppById($params);

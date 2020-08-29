@@ -26,9 +26,54 @@ final class CreateAppByStateMachineTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'config' => '',
+			'config'             => [
+                "name" => "MachineMechanismPHP",
+                    "mem" => 0.1,
+                    "cpu" => 0.1,
+                    "disk" => 0.1,
+                    "ports" => [
+                        [
+                            "port" => 80,
+                            "protocol" => "HTTP",
+                            "ssl" => False,
+                            "onlyInternal" => False,
+                            "basicAuthentication" => False,
+                            "forceRedirectHttps" => False
+                        ]
+                    ],
+                    // "cmd" => '',
+                    // "entrypoint" => '',
+                    "scalingMode" => "OFF",
+                    // "args" => [],
+                    "modules" => [
+                        [
+                            "code" => 50,
+                            "appId" => 0,
+                            "metadata" => [
+                                "appPath" => "/usr/share/nginx/html",
+                                "ftp" => False
+                            ]
+                        ]
+                    ],
+                    // "environments" => [],
+                    // "labels" => [],
+                    // "netAlias" => '',
+                    // "basicAuthentications" => [],
+                    // "portOptions" => null,
+                    "image" => [
+                        "name" => "nginx:latest",
+                        "registry" => "dockerhub",
+                        "accessToken" => "",
+                        "username" => ""
+                    ],
+                    "deployType" => "DOCKER_IMAGE",
+                    "minInstance" => 1,
+                    "maxInstance" => 1,
+                    // "network" => '',
+                    // "dependsOn" => []
+                ],
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,
 		];
 		try {
 			$result = $SakkuService->createAppByStateMachine($params);
@@ -46,7 +91,52 @@ final class CreateAppByStateMachineTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'config' => '',
+			'config'             => [
+                "name" => "MachineMechanismPHP",
+                    "mem" => 0.1,
+                    "cpu" => 0.1,
+                    "disk" => 0.1,
+                    "ports" => [
+                        [
+                            "port" => 80,
+                            "protocol" => "HTTP",
+                            "ssl" => False,
+                            "onlyInternal" => False,
+                            "basicAuthentication" => False,
+                            "forceRedirectHttps" => False
+                        ]
+                    ],
+                    // "cmd" => '',
+                    // "entrypoint" => '',
+                    "scalingMode" => "OFF",
+                    // "args" => [],
+                    "modules" => [
+                        [
+                            "code" => 50,
+                            "appId" => 0,
+                            "metadata" => [
+                                "appPath" => "/usr/share/nginx/html",
+                                "ftp" => False
+                            ]
+                        ]
+                    ],
+                    // "environments" => [],
+                    // "labels" => [],
+                    // "netAlias" => '',
+                    // "basicAuthentications" => [],
+                    // "portOptions" => null,
+                    "image" => [
+                        "name" => "nginx:latest",
+                        "registry" => "dockerhub",
+                        "accessToken" => "",
+                        "username" => ""
+                    ],
+                    "deployType" => "DOCKER_IMAGE",
+                    "minInstance" => 1,
+                    "maxInstance" => 1,
+                    // "network" => '',
+                    // "dependsOn" => []
+			],
         ];
 		try {
 			$result = $SakkuService->createAppByStateMachine($params);

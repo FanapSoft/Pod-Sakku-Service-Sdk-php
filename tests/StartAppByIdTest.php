@@ -26,12 +26,12 @@ final class StartAppByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'committed' => '',
-			'force' => '',
-			'tag' => '',
+			'Authorization' => $this->token,,
+			'committed' => true,
+			'force' => true,
+			'tag' => 'latest',
 		];
 		try {
 			$result = $SakkuService->startAppById($params);
@@ -49,7 +49,7 @@ final class StartAppByIdTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->startAppById($params);

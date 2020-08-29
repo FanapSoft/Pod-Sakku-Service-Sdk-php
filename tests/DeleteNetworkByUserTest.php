@@ -26,9 +26,9 @@ final class DeleteNetworkByUserTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'name' => '',
+			'name' => 'networkName',
 			## ================= Optional Parameters  =================
-			'force' => '',
+			'force' => true,
 		];
 		try {
 			$result = $SakkuService->deleteNetworkByUser($params);
@@ -46,7 +46,7 @@ final class DeleteNetworkByUserTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'name' => '',
+			'name' => 'networkName',
         ];
 		try {
 			$result = $SakkuService->deleteNetworkByUser($params);

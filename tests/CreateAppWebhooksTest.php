@@ -26,13 +26,12 @@ final class CreateAppWebhooksTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'applicationId' => '',
-			'url' => '',
-			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'secured' => '',
-			'topics' => '',
+			'appId'             => 2664,
+            'url'               => '192.168.6.22:8088',
+            ## ====================== Optional Parameters  ==========================
+    		'Authorization'     => $this->token,
+            'secured'           => false,
+            'topics'            => 'ALL',
 		];
 		try {
 			$result = $SakkuService->createAppWebhooks($params);
@@ -50,9 +49,8 @@ final class CreateAppWebhooksTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'applicationId' => '',
-			'url' => '',
+			'appId'             => 2664,
+            'url'               => '192.168.6.22:8088',
         ];
 		try {
 			$result = $SakkuService->createAppWebhooks($params);

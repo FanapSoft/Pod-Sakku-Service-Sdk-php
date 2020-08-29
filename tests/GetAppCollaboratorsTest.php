@@ -26,12 +26,12 @@ final class GetAppCollaboratorsTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
-			'all' => '',
-			'page' => '',
-			'size' => '',
+			'Authorization' => $this->token,,
+			'all' => true,
+			'page' => 0,
+			'size' => 10,
 		];
 		try {
 			$result = $SakkuService->getAppCollaborators($params);
@@ -49,7 +49,7 @@ final class GetAppCollaboratorsTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
+			'appId' => 1234,
         ];
 		try {
 			$result = $SakkuService->getAppCollaborators($params);

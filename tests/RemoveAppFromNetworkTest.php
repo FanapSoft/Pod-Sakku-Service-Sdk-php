@@ -26,8 +26,8 @@ final class RemoveAppFromNetworkTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'name' => '',
+			'appId' => 1234,
+			'name' => 'networkName',
 			## ================= Optional Parameters  =================
 		];
 		try {
@@ -46,8 +46,8 @@ final class RemoveAppFromNetworkTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'name' => '',
+			'appId' => 1234,
+			'name' => 'networkName',
         ];
 		try {
 			$result = $SakkuService->removeAppFromNetwork($params);

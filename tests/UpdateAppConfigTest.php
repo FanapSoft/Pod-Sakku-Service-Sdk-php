@@ -26,10 +26,131 @@ final class UpdateAppConfigTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'config' => '',
+			'appId' => 1234,
+			'config'  => [
+                "app" => [
+                    "appFile" => [
+                      "absolute" => true,
+                      "absolutePath" => "string",
+                      "canonicalPath" => "string",
+                      "directory" => true,
+                      "executable" => true,
+                      "file" => true,
+                      "freeSpace" => 0,
+                      "hidden" => true,
+                      "lastModified" => 0,
+                      "name" => "string",
+                      "parent" => "string",
+                      "path" => "string",
+                      "readable" => true,
+                      "totalSpace" => 0,
+                      "usableSpace" => 0,
+                      "writable" => true
+                    ],
+                    "fileHash" => "string",
+                    "imageName" => "string",
+                    "type" => "JAR"
+                  ],
+                "args" => [
+                    "string"
+                    ],
+                "basicAuthentications" => [
+                    [
+                        "password" => "string",
+                        "username" => "string"
+                    ]
+                ],
+                "cmd" => "string",
+                "cpu" => 0,
+                "dependsOn" => [
+                    "string"
+                ],
+                "deployType" => "APP",
+                "disk" => 0,
+                "entrypoint" => "string",
+                "environments" => [
+                    "additionalProp1" => "string",
+                    "additionalProp2" => "string",
+                    "additionalProp3" => "string"
+                ],
+                "git" => [
+                    "accessToken" => "string",
+                    "buildArgs" => [
+                      "string"
+                    ],
+                    "docker_file" => "string",
+                    "image_name" => "string",
+                    "url" => "string",
+                    "urlBranch" => "string",
+                    "username" => "string"
+                ],
+                "healthChecks" => [
+                    [
+                      "checkRate" => 0,
+                      "endpoint" => "/ping",
+                      "initialDelay" => 0,
+                      "responseCode" => 0,
+                      "responseString" => "string",
+                      "scheme" => "http"
+                    ]
+                ],
+                "image" => [
+                    "accessToken" => "string",
+                    "name" => "string",
+                    "registry" => "string",
+                    "username" => "string"
+                ],
+                "labels" => [
+                    "additionalProp1" => "string",
+                    "additionalProp2" => "string",
+                    "additionalProp3" => "string"
+                ],
+                "links" => [
+                    [
+                      "alias" => "string",
+                      "name" => "string"
+                    ]
+                ],
+                "maxInstance" => 0,
+                "mem" => 0,
+                "minInstance" => 0,
+                "modules" => [
+                    [
+                      "appId" => 0,
+                      "code" => 0,
+                      "metadata" => [
+                        "additionalProp1" => "string",
+                        "additionalProp2" => "string",
+                        "additionalProp3" => "string"
+                      ]
+                    ]
+                ],
+                "name" => "string",
+                "netAlias" => "string",
+                "network" => "string",
+                "pipeLineStatus" => "RUNNING",
+                "portOptions" => [
+                    [
+                      "name" => "string",
+                      "value" => "string"
+                    ]
+                ],
+                "ports" => [
+                    [
+                      "basicAuthentication" => true,
+                      "forceRedirectHttps" => true,
+                      "host" => 0,
+                      "onlyInternal" => true,
+                      "port" => 0,
+                      "protocol" => "http",
+                      "ssl" => true
+                    ]
+                ],
+                "scalingMode" => "OFF",
+                "worker" => "string"
+            ],
 			## ================= Optional Parameters  =================
-			'Authorization' => '',
+			'Authorization' => $this->token,,
 		];
 		try {
 			$result = $SakkuService->updateAppConfig($params);
@@ -47,8 +168,129 @@ final class UpdateAppConfigTest extends TestCase
 	{
 		$params = [
 			## ================= *Required Parameters  =================
-			'appId' => '',
-			'config' => '',
+			'appId' => 1234,
+			'config'  => [
+                "app" => [
+                    "appFile" => [
+                      "absolute" => true,
+                      "absolutePath" => "string",
+                      "canonicalPath" => "string",
+                      "directory" => true,
+                      "executable" => true,
+                      "file" => true,
+                      "freeSpace" => 0,
+                      "hidden" => true,
+                      "lastModified" => 0,
+                      "name" => "string",
+                      "parent" => "string",
+                      "path" => "string",
+                      "readable" => true,
+                      "totalSpace" => 0,
+                      "usableSpace" => 0,
+                      "writable" => true
+                    ],
+                    "fileHash" => "string",
+                    "imageName" => "string",
+                    "type" => "JAR"
+                  ],
+                "args" => [
+                    "string"
+                    ],
+                "basicAuthentications" => [
+                    [
+                        "password" => "string",
+                        "username" => "string"
+                    ]
+                ],
+                "cmd" => "string",
+                "cpu" => 0,
+                "dependsOn" => [
+                    "string"
+                ],
+                "deployType" => "APP",
+                "disk" => 0,
+                "entrypoint" => "string",
+                "environments" => [
+                    "additionalProp1" => "string",
+                    "additionalProp2" => "string",
+                    "additionalProp3" => "string"
+                ],
+                "git" => [
+                    "accessToken" => "string",
+                    "buildArgs" => [
+                      "string"
+                    ],
+                    "docker_file" => "string",
+                    "image_name" => "string",
+                    "url" => "string",
+                    "urlBranch" => "string",
+                    "username" => "string"
+                ],
+                "healthChecks" => [
+                    [
+                      "checkRate" => 0,
+                      "endpoint" => "/ping",
+                      "initialDelay" => 0,
+                      "responseCode" => 0,
+                      "responseString" => "string",
+                      "scheme" => "http"
+                    ]
+                ],
+                "image" => [
+                    "accessToken" => "string",
+                    "name" => "string",
+                    "registry" => "string",
+                    "username" => "string"
+                ],
+                "labels" => [
+                    "additionalProp1" => "string",
+                    "additionalProp2" => "string",
+                    "additionalProp3" => "string"
+                ],
+                "links" => [
+                    [
+                      "alias" => "string",
+                      "name" => "string"
+                    ]
+                ],
+                "maxInstance" => 0,
+                "mem" => 0,
+                "minInstance" => 0,
+                "modules" => [
+                    [
+                      "appId" => 0,
+                      "code" => 0,
+                      "metadata" => [
+                        "additionalProp1" => "string",
+                        "additionalProp2" => "string",
+                        "additionalProp3" => "string"
+                      ]
+                    ]
+                ],
+                "name" => "string",
+                "netAlias" => "string",
+                "network" => "string",
+                "pipeLineStatus" => "RUNNING",
+                "portOptions" => [
+                    [
+                      "name" => "string",
+                      "value" => "string"
+                    ]
+                ],
+                "ports" => [
+                    [
+                      "basicAuthentication" => true,
+                      "forceRedirectHttps" => true,
+                      "host" => 0,
+                      "onlyInternal" => true,
+                      "port" => 0,
+                      "protocol" => "http",
+                      "ssl" => true
+                    ]
+                ],
+                "scalingMode" => "OFF",
+                "worker" => "string"
+            ],
         ];
 		try {
 			$result = $SakkuService->updateAppConfig($params);
